@@ -41,9 +41,11 @@ dd = data[2]
 
 yr = int(yr)
 mm = int(mm)
-dd = -int(dd)
+dd = int(dd)
 
 
 
 res = wkday(yr, mm, dd)
 con.sendall(bytes(res.encode("ascii")))
+con.close()
+ss.close()
